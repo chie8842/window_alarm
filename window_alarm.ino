@@ -254,20 +254,6 @@ void setup()
 
 void loop()
 {
-  if(M5.BtnA.wasPressed()) {
-        M5.Lcd.print("Alarm Start! \r\n");
-        sendResult = true;
-  }
-  if(M5.BtnB.wasPressed()) {
-        M5.Lcd.print("Alarm Finish! \r\n");
-        sendResult = false;
-  }
-  if(M5.BtnC.wasPressed()) {
-        M5.Lcd.print("Alarm Finish! \r\n");
-        M5.Speaker.mute();
-        sendResult = false;
-  }
-  
   // If intPin goes high, all data registers have new data
   // On interrupt, check if data ready interrupt
   if (IMU.readByte(MPU9250_ADDRESS, INT_STATUS) & 0x01)
